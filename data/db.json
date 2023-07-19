@@ -1,43 +1,61 @@
 {
   "products": [
     {
-      "id": 1,
-      "nama": "product 1",
-      "deskripsi": "baju bagus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quas expedita quo tempora eius dolorum aliquid repellendus dignissimos. Asperiores, laboriosam.",
-      "hargaBeli": 100000,
-      "hargaJual": 120000,
-      "stok": 10,
-      "urlGambar": "https://cf.shopee.co.id/file/336bec2575b012f3ca748d67ef7cebe0"
-    },
-    {
-      "id": 2,
-      "nama": "product 2",
-      "deskripsi": "baju bagus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quas expedita quo tempora eius dolorum aliquid repellendus dignissimos. Asperiores, laboriosam.",
-      "hargaBeli": 200000,
-      "hargaJual": 230000,
-      "stok": 20,
-      "urlGambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRqKLlDV1RrF-gI9bL7TDr8KunAlv-W83gw&usqp=CAU"
-    },
-    {
-      "id": 3,
-      "nama": "product 2",
-      "deskripsi": "baju bagus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quas expedita quo tempora eius dolorum aliquid repellendus dignissimos. Asperiores, laboriosam.",
-      "hargaBeli": 200000,
-      "hargaJual": 230000,
-      "stok": 20,
-      "urlGambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRqKLlDV1RrF-gI9bL7TDr8KunAlv-W83gw&usqp=CAU"
-    },
-    {
-      "id": 4,
-      "nama": "product 2",
-      "deskripsi": "baju bagus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quas expedita quo tempora eius dolorum aliquid repellendus dignissimos. Asperiores, laboriosam.",
-      "hargaBeli": 200000,
-      "hargaJual": 230000,
-      "stok": 20,
-      "urlGambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRqKLlDV1RrF-gI9bL7TDr8KunAlv-W83gw&usqp=CAU"
-    },
-    {
       "id": 5,
+      "nama": "product 2",
+      "deskripsi": "baju bagus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quas expedita quo tempora eius dolorum aliquid repellendus dignissimos. Asperiores, laboriosam.",
+      "hargaBeli": 200000,
+      "hargaJual": 230000,
+      "stok": 20,
+      "urlGambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRqKLlDV1RrF-gI9bL7TDr8KunAlv-W83gw&usqp=CAU"
+    },
+    {
+      "id": 52,
+      "nama": "product 2",
+      "deskripsi": "baju bagus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quas expedita quo tempora eius dolorum aliquid repellendus dignissimos. Asperiores, laboriosam.",
+      "hargaBeli": 200000,
+      "hargaJual": 230000,
+      "stok": 20,
+      "urlGambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRqKLlDV1RrF-gI9bL7TDr8KunAlv-W83gw&usqp=CAU"
+    },
+    {
+      "id": 51,
+      "nama": "product 2",
+      "deskripsi": "baju bagus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quas expedita quo tempora eius dolorum aliquid repellendus dignissimos. Asperiores, laboriosam.",
+      "hargaBeli": 200000,
+      "hargaJual": 230000,
+      "stok": 20,
+      "urlGambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRqKLlDV1RrF-gI9bL7TDr8KunAlv-W83gw&usqp=CAU"
+    },
+    {
+      "id": 55,
+      "nama": "product 2",
+      "deskripsi": "baju bagus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quas expedita quo tempora eius dolorum aliquid repellendus dignissimos. Asperiores, laboriosam.",
+      "hargaBeli": 200000,
+      "hargaJual": 230000,
+      "stok": 20,
+      "urlGambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRqKLlDV1RrF-gI9bL7TDr8KunAlv-W83gw&usqp=CAU"
+    },
+    {
+      "id": 53,
+      "nama": "product 2",
+      "deskripsi": "baju bagus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quas expedita quo tempora eius dolorum aliquid repellendus dignissimos. Asperiores, laboriosam.",
+      "hargaBeli": 200000,
+      "hargaJual": 230000,
+      "stok": 20,
+      "urlGambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRqKLlDV1RrF-gI9bL7TDr8KunAlv-W83gw&usqp=CAU"
+    },
+    {
+      "id": 56,
+      "nama": "product 2",
+      "deskripsi": "baju bagus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quas expedita quo tempora eius dolorum aliquid repellendus dignissimos. Asperiores, laboriosam.",
+      "hargaBeli": 200000,
+      "hargaJual": 230000,
+      "stok": 20,
+      "urlGambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRqKLlDV1RrF-gI9bL7TDr8KunAlv-W83gw&usqp=CAU"
+    },
+    {
+      "id": 57,
       "nama": "product 2",
       "deskripsi": "baju bagus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quas expedita quo tempora eius dolorum aliquid repellendus dignissimos. Asperiores, laboriosam.",
       "hargaBeli": 200000,
