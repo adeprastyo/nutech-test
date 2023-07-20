@@ -4,8 +4,8 @@ import { useState } from "react";
 export default function CustTable({ datas }) {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [selectedDataId, setSelectedDataId] = useState(null);
-  let no = 1;
   const [productDatas, setProductDatas] = useState(datas);
+  let no = 1;
 
   const handleDelete = () => {
     var requestOptions = {
@@ -22,7 +22,6 @@ export default function CustTable({ datas }) {
       })
       .then((result) => {
         console.log(result);
-        console.log("Data with ID " + selectedDataId + " has been deleted.");
         setSelectedDataId(null);
         setIsDeleteModalOpen(false);
         const updatedProductDatas = productDatas.filter(
@@ -51,40 +50,43 @@ export default function CustTable({ datas }) {
           <Table.HeadCell>Opsi</Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">
-          {productDatas.map((data) => {
-            return (
-              <Table.Row
-                key={data.id}
-                className="bg-white dark:border-gray-700 dark:bg-gray-800"
-              >
-                <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                  {no++}
-                </Table.Cell>
-                <Table.Cell>
-                  <img className="w-20 h-20" src={data.urlGambar} />
-                </Table.Cell>
-                <Table.Cell>{data.nama}</Table.Cell>
-                <Table.Cell>{data.deskripsi}</Table.Cell>
-                <Table.Cell>{data.hargaBeli}</Table.Cell>
-                <Table.Cell>{data.hargaJual}</Table.Cell>
-                <Table.Cell>{data.stok}</Table.Cell>
-                <Table.Cell>
-                  <div className="flex justify-center items-center gap-2">
-                    <Button>Edit</Button>
-                    <Button
-                      color="failure"
-                      onClick={() => {
-                        setSelectedDataId(data.id);
-                        setIsDeleteModalOpen(true);
-                      }}
-                    >
-                      Hapus
-                    </Button>
-                  </div>
-                </Table.Cell>
-              </Table.Row>
-            );
-          })}
+          {productDatas
+            .slice()
+            .sort((a, b) => b.id - a.id)
+            .map((data) => {
+              return (
+                <Table.Row
+                  key={data.id}
+                  className="bg-white dark:border-gray-700 dark:bg-gray-800"
+                >
+                  <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    {no++}
+                  </Table.Cell>
+                  <Table.Cell>
+                    <img className="w-20 h-20" src={data.urlGambar} />
+                  </Table.Cell>
+                  <Table.Cell>{data.nama}</Table.Cell>
+                  <Table.Cell>{data.deskripsi}</Table.Cell>
+                  <Table.Cell>{data.hargaBeli}</Table.Cell>
+                  <Table.Cell>{data.hargaJual}</Table.Cell>
+                  <Table.Cell>{data.stok}</Table.Cell>
+                  <Table.Cell>
+                    <div className="flex justify-center items-center gap-2">
+                      <Button>Edit</Button>
+                      <Button
+                        color="failure"
+                        onClick={() => {
+                          setSelectedDataId(data.id);
+                          setIsDeleteModalOpen(true);
+                        }}
+                      >
+                        Hapus
+                      </Button>
+                    </div>
+                  </Table.Cell>
+                </Table.Row>
+              );
+            })}
         </Table.Body>
       </Table>
 
