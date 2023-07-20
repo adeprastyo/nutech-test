@@ -22,16 +22,12 @@ export default function Data() {
   });
 
   useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = () => {
     fetch("https://64b9394379b7c9def6c0c568.mockapi.io/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
       });
-  };
+  }, []);
 
   const handleOpenAddModal = (e) => {
     e.preventDefault();
@@ -52,8 +48,7 @@ export default function Data() {
     setIsAddModalOpen(false);
   };
 
-  const handleSaveData = (e) => {
-    e.preventDefault();
+  const handleSaveData = () => {
     const newData = {
       nama: schemaProduct.nama,
       deskripsi: schemaProduct.deskripsi,
@@ -80,8 +75,9 @@ export default function Data() {
         return response.json();
       })
       .then((result) => {
+        console.log(result);
+        setProducts(result);
         setIsAddModalOpen(false);
-        fetchData();
       })
       .catch((error) => {
         console.log("Error adding data:", error);
