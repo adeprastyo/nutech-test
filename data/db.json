@@ -62,6 +62,15 @@
       "hargaJual": 230000,
       "stok": 20,
       "urlGambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRqKLlDV1RrF-gI9bL7TDr8KunAlv-W83gw&usqp=CAU"
+    },
+    {
+      "nama": "contoh",
+      "deskripsi": "contoh ",
+      "hargaBeli": "1000",
+      "hargaJual": "2000",
+      "stok": "10",
+      "urlGambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYgi08f21tpsK_D4wmGgKr1ix7SgkyxboZNHcvgFqnyD9rYGhirDZCSb5KTf1jo_H9Zd8&usqp=CAU",
+      "id": 63
     }
   ]
 }

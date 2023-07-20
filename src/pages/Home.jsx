@@ -27,19 +27,22 @@ export default function Home() {
   return (
     <>
       <CustNavbar />
-      <Container title="Products">
-        {products.map((product) => {
-          return (
-            <CustCard
-              key={product.id}
-              name={product.nama}
-              desc={product.deskripsi}
-              price={product.hargaJual}
-              imgUrl={product.urlGambar}
-            />
-          );
-        })}
-      </Container>
+      <div className="container mx-auto ">
+        <h1 className="mt-10 font-bold text-3xl text-center">Products</h1>
+        <div className="w-full flex flex-wrap p-5 gap-10 justify-center">
+          {products.map((product) => {
+            return (
+              <CustCard
+                key={product.id}
+                name={product.nama}
+                desc={product.deskripsi}
+                price={product.hargaJual}
+                imgUrl={product.urlGambar}
+              />
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 }
