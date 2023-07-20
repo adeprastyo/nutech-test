@@ -3,12 +3,13 @@ import CustTable from "../components/CustTable";
 import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 import { Button } from "flowbite-react";
-import { useDispatch, useSelector } from "react-redux";
-import { addProduct } from "../redux/slices/productSlice";
+// import { useDispatch, useSelector } from "react-redux";
+// import { addProduct } from "../redux/slices/productSlice";
 
 export default function Data() {
-  const reduxProducts = useSelector((state) => state.products.products);
-  const dispatch = useDispatch();
+  // const reduxProducts = useSelector((state) => state.products.products);
+  // const dispatch = useDispatch();
+  const [products, setProducts] = useState(undefined);
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [schemaProduct, setSchemaProduct] = useState({
     nama: "",
@@ -21,18 +22,24 @@ export default function Data() {
   });
 
   useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = () => {
     fetch("https://64b9394379b7c9def6c0c568.mockapi.io/products")
       .then((res) => res.json())
       .then((data) => {
-        dispatch(addProduct(data));
+        setProducts(data);
       });
-  }, []);
+  };
 
-  const handleOpenAddModal = () => {
+  const handleOpenAddModal = (e) => {
+    e.preventDefault();
     setIsAddModalOpen(true);
   };
 
-  const handleCloseAddModal = () => {
+  const handleCloseAddModal = (e) => {
+    e.preventDefault();
     setSchemaProduct({
       nama: "",
       deskripsi: "",
@@ -72,9 +79,10 @@ export default function Data() {
         return response.json();
       })
       .then((result) => {
-        console.log(result);
-        dispatch(addProduct(result));
         setIsAddModalOpen(false);
+        fetchData();
+
+        window.location.reload();
       })
       .catch((error) => {
         console.log("Error adding data:", error);
@@ -82,7 +90,7 @@ export default function Data() {
       });
   };
 
-  if (reduxProducts === undefined) {
+  if (products === undefined) {
     return (
       <>
         <CustNavbar />
@@ -107,7 +115,7 @@ export default function Data() {
           </Button>
         </div>
         <div className="w-full flex flex-wrap p-5 gap-10 justify-center">
-          <CustTable datas={reduxProducts} />
+          <CustTable datas={products} />
         </div>
       </div>
 
