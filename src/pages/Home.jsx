@@ -7,12 +7,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { addProduct, updateProduct } from "../redux/slices/productSlice";
 
 export default function Home() {
-  // const [products, setProducts] = useState(undefined);
   const reduxProducts = useSelector((state) => state.products.products);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch("https://64b9394379b7c9def6c0c568.mockapi.io/products")
       .then((res) => res.json())
       .then((data) => {
         // setProducts(data);

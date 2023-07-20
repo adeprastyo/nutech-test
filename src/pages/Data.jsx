@@ -21,7 +21,7 @@ export default function Data() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch("https://64b9394379b7c9def6c0c568.mockapi.io/products")
       .then((res) => res.json())
       .then((data) => {
         dispatch(addProduct(data));
@@ -61,7 +61,10 @@ export default function Data() {
       body: JSON.stringify(newData),
     };
 
-    fetch("http://localhost:3000/products", requestOptions)
+    fetch(
+      "https://64b9394379b7c9def6c0c568.mockapi.io/products",
+      requestOptions
+    )
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to add data.");

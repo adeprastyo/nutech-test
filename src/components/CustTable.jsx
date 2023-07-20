@@ -13,7 +13,10 @@ export default function CustTable({ datas }) {
       redirect: "follow",
     };
 
-    fetch(`http://localhost:3000/products/${selectedDataId}`, requestOptions)
+    fetch(
+      `https://64b9394379b7c9def6c0c568.mockapi.io/products/${selectedDataId}`,
+      requestOptions
+    )
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to delete data.");
