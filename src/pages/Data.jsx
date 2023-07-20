@@ -52,7 +52,8 @@ export default function Data() {
     setIsAddModalOpen(false);
   };
 
-  const handleSaveData = () => {
+  const handleSaveData = (e) => {
+    e.preventDefault();
     const newData = {
       nama: schemaProduct.nama,
       deskripsi: schemaProduct.deskripsi,
@@ -81,8 +82,6 @@ export default function Data() {
       .then((result) => {
         setIsAddModalOpen(false);
         fetchData();
-
-        window.location.reload();
       })
       .catch((error) => {
         console.log("Error adding data:", error);
